@@ -8,4 +8,4 @@ ffmpeg -i audio.wav -f segment -segment_time 15 -c copy ./audio-chunks/audio_seg
 ffmpeg -i $1 -vf fps=15 ./frames/out%05d.png
 
 # save the duration of the video
-ffmpeg -i testVideo.mp4 2>&1 | grep "Duration" > duration.txt
+ffmpeg -i $1 2>&1 | grep "Duration" > duration.txt
